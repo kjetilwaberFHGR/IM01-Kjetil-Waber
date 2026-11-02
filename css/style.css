@@ -2,6 +2,7 @@
 @import "fonts.css";
 
 /* Tokens */
+
 /* Dunkel (Standard) */
 :root {
     --ground: #0a0b0d;
@@ -20,6 +21,7 @@
     --focus-ring: 0 0 0 2px #0a0b0d, 0 0 0 4px #ffb020;
     color-scheme: dark;
 }
+
 /* Hell */
 [data-theme="light"] {
     --ground: #f3f2ee;
@@ -67,7 +69,57 @@
     --slow: 640ms;
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+
 /* Grundlagen */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-sans);
+    text-wrap: balance;
+}
+
+/* Stil "display" */
+h2 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 0.95;
+    font-weight: 760;
+    letter-spacing: -0.02em;
+    font-stretch: 112%;
+}
+
+/* Stil "heading" */
+h3 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 640;
+}
+
+a {
+    color: var(--flash-ink);
+    text-underline-offset: 3px;
+}
+
+:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: var(--focus-ring);
+}
+
+::selection {
+    background: var(--flash-soft);
+    color: var(--ink);
+}
 
 /* Bausteine */
 
