@@ -12,7 +12,29 @@
 </head>
 <body>
     <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-    <header class="site-header"> <!-- Header mit Logo, Navigation, Umschalter --> </header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">α9 III</a>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Hell</button>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hauptnav">
+                <span class="menu-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Menü</span>
+            </button>
+            <nav id="hauptnav" aria-label="Hauptnavigation">
+                <ul class="nav-list list-reset">
+                    <li>
+                        <a class="nav-link" href="index.html">Start</a>
+                    </li>
+                    <li>
+                        <a class="nav-link is-active" href="ueber-mich.html" aria-current="page">Über mich</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main id="inhalt"> <!-- Hero, Kennzahlen, Abschnitte --> </main>
     <footer class="site-footer"> <!-- Footer --> </footer>
 </body>
