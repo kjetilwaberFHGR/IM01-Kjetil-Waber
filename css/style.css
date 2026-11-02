@@ -249,6 +249,103 @@ a {
 }
 
 /* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--ground);
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--nav-height);
+}
+
+.logo {
+    margin-right: auto;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    font-stretch: 112%;
+}
+
+.theme-toggle {
+    height: 40px;
+    padding: 0 var(--space-4);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.theme-toggle[aria-pressed="true"] {
+    background: var(--flash-soft);
+    color: var(--flash-ink);
+    border-color: var(--flash-ink);
+}
+
+.menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--ink);
+}
+
+.menu-icon {
+    display: block;
+    width: 18px;
+    height: 8px;
+    border-top: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+}
+
+.site-header nav {
+    flex-basis: 100%;
+    display: none;
+}
+
+.site-header.is-open nav {
+    display: block;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--space-2);
+}
+
+.nav-link {
+    display: block;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: var(--flash-ink);
+}
+
+.nav-link.is-active {
+    color: var(--flash-ink);
+    font-weight: 600;
+}
+
+
 
 /* Hero */
 
@@ -266,6 +363,42 @@ a {
 
     .button-group {
         flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-header nav {
+        display: block;
+        flex-basis: auto;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: var(--space-8);
+        padding-block: 0;
+    }
+
+    .nav-link {
+        padding: var(--space-2) 0;
+        border-bottom: 2px solid transparent;
+        font-size: 15px;
+        color: var(--ink-muted);
+    }
+
+    .nav-link:hover {
+        color: var(--ink);
+    }
+
+    .nav-link.is-active {
+        color: var(--ink);
+        border-bottom-color: var(--flash);
+    }
+
+    .theme-toggle {
+        order: 2;
+        margin-left: var(--space-6);
     }
 }
 
