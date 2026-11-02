@@ -121,6 +121,11 @@ a {
     color: var(--ink);
 }
 
+hgroup {
+    display: grid;
+    gap: var(--space-3);
+}
+
 /* Bausteine */
 .container {
     width: 100%;
@@ -177,6 +182,14 @@ a {
     color: var(--sensor);
     border-color: var(--sensor);
     background: var(--sensor-soft);
+}
+
+.badge--sensor::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
 }
 
 .btn {
@@ -246,6 +259,50 @@ a {
 
 .skip-link:focus {
     top: var(--space-2);
+}
+
+.media-frame {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+}
+
+.media-frame img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.af-frame {
+    position: relative;
+}
+
+.af-frame::before, .af-frame::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-style: solid;
+    border-color: var(--line-strong);
+    border-width: 0;
+    pointer-events: none;
+    transition: border-color var(--fast) var(--ease);
+}
+
+.af-frame::before {
+    top: -8px;
+    left: -8px;
+    border-width: 2px 0 0 2px;
+}
+
+.af-frame::after {
+    bottom: -8px;
+    right: -8px;
+    border-width: 0 2px 2px 0 ;
+}
+
+.af-frame.is-locked::before, .af-frame.is-locked:after, .af-frame:hover::before, .af-frame:hover::after {
+    border-color: var(--flash);
 }
 
 /* Header */
@@ -345,9 +402,52 @@ a {
     font-weight: 600;
 }
 
-
-
 /* Hero */
+
+.hero {
+    padding-block: var(--space-12) var(--space-12);
+}
+
+.hero-grid {
+    display: grid;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+}
+
+.hero-text .button-group {
+    align-self: stretch;
+}
+
+.hero-title {
+    font-size: clamp(40px, 9.5vw, 112px);
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-stretch: 112%;
+}
+
+.hero-title.hl {
+    display: block;
+}
+
+.exif {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+}
+
+
 
 /* Abschnitte */
 
@@ -400,6 +500,22 @@ a {
         order: 2;
         margin-left: var(--space-6);
     }
+
+    .hero-text .button-group {
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+    }
+
+    .hero {
+        padding-block: var(--space-24) var(--space-16);
+    }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
