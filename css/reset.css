@@ -1,0 +1,29 @@
+/* Reset, gleicht Browser-Unterschiede aus." */
+
+/* Breite inklusive Innenabstand und Rahmen. Ohne dies wird ein Kasten mit with 100% plus padding breiter als Bildschirm*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Abstände setzt ab nun nur noch CSS, bei dd fällt Einzung links weg*/
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol {
+    margin: 0;
+}
+
+/* Bilder werden nie breiter als ihr Platz und behalten ihr Seitenverhältnis block entfernt die kleine Lücke unter Bildern*/
+img, video, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Formulare übernehmen meine Schrift statt der Systemschrift */
+input, button, select, textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* Hand-Cursor auf allen Knöpfen */
+button {
+    cursor: pointer;
+}
