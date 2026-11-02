@@ -1,0 +1,84 @@
+@import "reset.css";
+@import "fonts.css";
+
+/* Tokens */
+/* Dunkel (Standard) */
+:root {
+    --ground: #0a0b0d;
+    --surface: #131518;
+    --surface-2: #1c1f23;
+    --line: #2a2e34;
+    --line-strong: #6b717a;
+    --ink: #f1f0eb;
+    --ink-muted: #a3a7ae;
+    --flash: #ffb020;
+    --flash-ink: #ffb020;
+    --flash-soft: #2e2108;
+    --on-flash: #121315;
+    --sensor: #4fc3d9;
+    --sensor-soft: #0c2a30;
+    --focus-ring: 0 0 0 2px #0a0b0d, 0 0 0 4px #ffb020;
+    color-scheme: dark;
+}
+/* Hell */
+[data-theme="light"] {
+    --ground: #f3f2ee;
+    --surface: #ffffff;
+    --surface-2: #e8e6e0;
+    --line: #d6d3cb;
+    --line-strong: #85827b;
+    --ink: #121315;
+    --ink-muted: #55595f;
+    --flash: #f5a00f;
+    --flash-ink: #9a4b00;
+    --flash-soft: #fdecc8;
+    --on-flash: #121315;
+    --sensor: #0a6a7a;
+    --sensor-soft: #d5eef2;
+    --focus-ring: 0 0 0 2px #f3f2ee, 0 0 0 4px #9a4b00;
+    color-scheme: light;
+}
+
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
+
+    --radius-sm: 4px;
+    --radius-md: 10px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+
+    --container: 1200px;
+    --measure: 64ch;
+    --nav-height: 64px;
+    --gutter: clamp(20px, 5vw, 48px);
+
+    --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", Menlo, monospace;
+
+    --fast: 160ms;
+    --slow: 640ms;
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+/* Grundlagen */
+
+/* Bausteine */
+
+/* Header */
+
+/* Hero */
+
+/* Abschnitte */
+
+/* Footer */
+
+/* Seiten (über mich, kontakt) */
+
+/* Media Queries */
