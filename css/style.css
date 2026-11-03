@@ -660,6 +660,18 @@ hgroup {
     color: var(--ink-muted);
 }
 
+.video-figure {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-12);
+}
+
+.video-figure video {
+    width: 100%;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+}
+
 /* Footer */
 
 /* Seiten (über mich, kontakt) */
