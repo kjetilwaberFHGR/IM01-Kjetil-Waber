@@ -350,6 +350,21 @@ hgroup {
     color: var(--on-flash);
 }
 
+.card {
+    display: grid;
+    justify-items: start;
+    align-content: start;
+    gap: var(--space-3);
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    transition: background-color var(--fast) var(--ease), border-color var(--fast) var(--ease);
+}
+
+.card--sensor {
+    border-color: var(--sensor);
+}
 
 /* Header */
 .site-header {
@@ -597,6 +612,11 @@ hgroup {
     }
 }
 
+.compare {
+    display: grid;
+    gap: var(--space-6);
+}
+
 /* Footer */
 
 /* Seiten (über mich, kontakt) */
@@ -657,6 +677,10 @@ hgroup {
 
     .hero-text .button-group {
         align-self: flex-start;
+    }
+
+    .compare {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
