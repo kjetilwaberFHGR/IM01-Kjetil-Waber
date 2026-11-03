@@ -672,6 +672,22 @@ hgroup {
     border-radius: var(--radius-md);
 }
 
+/* 02 Tempo */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+}
+
+.cards p {
+    color: var(--ink-muted);
+}
+
+.cards .card:hover {
+    background: var(--surface-2);
+    border-color: var(--line-strong);
+}
+
 /* Footer */
 
 /* Seiten (über mich, kontakt) */
