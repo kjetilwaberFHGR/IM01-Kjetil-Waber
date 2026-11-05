@@ -853,7 +853,7 @@ address a {
 
 .gallery {
     display: grid;
-    gap:  var(--space-8);
+    gap: var(--space-8);
 }
 
 .impressum {
