@@ -19,6 +19,7 @@
     --sensor: #4fc3d9;
     --sensor-soft: #0c2a30;
     --focus-ring: 0 0 0 2px #0a0b0d, 0 0 0 4px #ffb020;
+    --error: #ff6b6b;
     color-scheme: dark;
 }
 
@@ -38,6 +39,7 @@
     --sensor: #0a6a7a;
     --sensor-soft: #d5eef2;
     --focus-ring: 0 0 0 2px #f3f2ee, 0 0 0 4px #9a4b00;
+    --error: #c62828;
     color-scheme: light;
 }
 
@@ -900,7 +902,9 @@ address a {
     font-weight: 600;
 }
 
-.form-field input, .form-field select, .form-field textarea {
+.form-field input,
+.form-field select,
+.form-field textarea {
     width: 100%;
     min-height: 52px;
     padding: 12px 14px;
@@ -911,21 +915,25 @@ address a {
     font-size: 16px;
 }
 
-.form-field input:focus-visible, .form-field select:focus-visible, .form-field textarea:focus-visible {
+.form-field input:user-invalid,
+.form-field select:user-invalid,
+.form-field textarea:user-invalid {
+    border-color: var(--error);
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
     border-color: var(--flash);
 }
 
-.form-field::placeholder {
+.form-field ::placeholder {
     color: var(--ink-muted);
 }
 
 .form-field textarea {
     min-height: 160px;
     resize: vertical;
-}
-
-.form-field input:user-invalid {
-    border-color: red;
 }
 
 .form-check {
@@ -959,6 +967,7 @@ address a {
     letter-spacing: 0;
     font-stretch: 100%;
 }
+
 .notice {
     display: grid;
     gap: var(--space-2);
@@ -967,7 +976,6 @@ address a {
     border-radius: var(--radius-md);
     color: var(--ink-muted);
 }
-
 
 /* Media Queries */
 @media (min-width: 480px) {
