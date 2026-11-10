@@ -876,6 +876,98 @@ address a {
     color: var(--ink-muted);
 }
 
+/* Kontakt */
+.contact-grid {
+    display: grid;
+    gap: var(--space-12);
+}
+
+.contact-form {
+    display: grid;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+}
+
+.form-field {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.form-field label {
+    font-weight: 600;
+}
+
+.form-field input, .form-field select, .form-field textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    background: var(--ground);
+    color: var(--ink);
+    font-size: 16px;
+}
+
+.form-field input:focus-visible, .form-field select:focus-visible, .form-field textarea:focus-visible {
+    border-color: var(--flash);
+}
+
+.form-field::placeholder {
+    color: var(--ink-muted);
+}
+
+.form-field textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.form-field input:user-invalid {
+    border-color: red;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.form-check label {
+    display: flex;
+    align-items: center;
+    min-height: var(--target);
+}
+
+.form-check input {
+    width: 24px;
+    height: 24px;
+    accent-color: var(--flash);
+}
+
+.contact-aside {
+    display: grid;
+    align-content: start;
+    gap: var(--space-6);
+}
+
+.contact-aside h2 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 640;
+    letter-spacing: 0;
+    font-stretch: 100%;
+}
+.notice {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-6);
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--radius-md);
+    color: var(--ink-muted);
+}
+
 
 /* Media Queries */
 @media (min-width: 480px) {
@@ -985,6 +1077,11 @@ address a {
 
     .impressum {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 7fr 5fr;
+        align-items: start;
     }
 }
 
