@@ -178,6 +178,10 @@ address a {
     color: var(--flash-ink);
 }
 
+.no-caps {
+    text-transform: none;
+}
+
 .badge {
     display: inline-flex;
     align-items: center;
@@ -741,7 +745,6 @@ address a {
     font-size: 15px;
     line-height: 24px;
 }
-
 
 /* Footer */
 .site-footer {
