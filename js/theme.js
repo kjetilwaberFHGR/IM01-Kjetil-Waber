@@ -8,7 +8,7 @@ const toggle = document.querySelector("#theme-toggle");
 //3 Eine Funktion schreiben, die ein Thema anwendet
 function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
-    toggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+    toggle.textContent = theme === "light" ? "Dunkel" : "Hell";
 }
 
 //4 Beim Laden das gespeicherte Thema anwenden
